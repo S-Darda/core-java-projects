@@ -41,13 +41,12 @@ public class ATMsystem {
     boolean authenticate(int acNum,int pin)
     {
         User user = users.get(acNum);
-        System.out.println(user.pin);
-        if (user.pin == pin){
-            return true;
-        }else {
-            System.out.println("Try again");
+        if (user != null) {
+            return user.pin  ==pin;
+        } else {
+            System.out.println("Account not found.");
+            return false;
         }
-        return false;
 
     }
     void operation(int accNum)
