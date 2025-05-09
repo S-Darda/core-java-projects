@@ -1,7 +1,7 @@
 public class User {
-        int pin;
-        double balance;
-        String name;
+        public int pin;
+        public double balance;
+        public String name;
 
         User(int pin, double balance,String name) {
             this.pin = pin;
